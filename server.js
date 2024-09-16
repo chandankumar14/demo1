@@ -30,7 +30,7 @@ app.use(cors(corsOpts));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
 // database
-// const db = require("./model");
+const db = require("./model");
 // const Role = db.role;
 
 // db.sequelize
@@ -47,10 +47,10 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to EM ERP Application." });
 });
 ///////////////////////Images routes will be listed here////////////////
-app.use("/upload_files", express.static(path.join(__dirname, "/upload_files")));
-/** Module wise Routing configuration is here*********** */
-require("./app/orders/_routes/_order_routes")(app);
-require("./app/product/_router/_product_routes")(app);
+// app.use("/upload_files", express.static(path.join(__dirname, "/upload_files")));
+// /** Module wise Routing configuration is here*********** */
+// require("./app/orders/_routes/_order_routes")(app);
+// require("./app/product/_router/_product_routes")(app);
 // set port, listen for requests
 app.listen(process.env.SERVER_PORT, () => {
   console.log(
