@@ -1,0 +1,10 @@
+node_modules
+node_modules/
+/node_modules
+/env
+/.env
+document
+app/config/db.config.js
+/uploaded_files
+config/db.config.js
+# app/config/db.config.js
